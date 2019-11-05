@@ -1,0 +1,10 @@
+<!--pages/landing/landing.wxml-->
+<view class="banner" style="height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lewagon.com/api/v1/cities/shenzhen/cover?width=1200);">
+  <view class="lp-content">
+  <view class="h1">Meow</view>
+  <view class="p">Me can do!</view>
+  <view class="btn btn-flat" bindtap="goToStoriesPage">
+  Go to stories
+  </view>
+  </view>
+</view>
