@@ -9,7 +9,7 @@
   <view class="card-product-infos">
   <!--下面的为：仅当title为Indeed，才显示item.name-->
     <view class="h2" wx:if="{{ title === 'Indeed'}}" wx:for-index="index">{{ item.name }}</view>
-    <view class="p">{{index+1}} {{ item.desc }}</view>
+    <view class="p">{{index+1}} {{ item.text }}</view>
   </view>
 </view>
 

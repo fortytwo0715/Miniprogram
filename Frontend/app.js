@@ -34,20 +34,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    stories: [{
-      name: 'First story',
-      desc: 'a good boy'
-    }, {
-        name: 'Second story',
-        desc: 'a good girl'
-      }, {
-        name: 'Me and You',
-        desc: 'Building a mini program is fun!!! FMC.'
-      },
-      {
-        name: 'Sweet story',
-        desc: 'a love story'
-      }]
+  userInfo: null,
+  stories: []
   }
 })

@@ -6,7 +6,7 @@
 
   <view class="section">
     <view class="section__title">Your story</view>
-    <textarea name="content" placeholder="Write your FMC here" ></textarea>
+    <textarea name="text" placeholder="Write your FMC here" ></textarea>
   </view>
 
   <view class="btn-area">

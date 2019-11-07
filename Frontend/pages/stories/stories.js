@@ -29,11 +29,25 @@ Page({
   onLoad: function (options) {
   /** Below sets data for title from browser cache, otherwise display 'Huh?'
    */
-    this.setData({
-    title: wx.getStorageSync('story-title') || 'Huh?'
-    })
+
 
   },
+
+  // 4th step - details setting
+
+  // 1st step
+  getResult(res) {
+    console.log(res)
+    // 5th step - set data
+    this.setData({
+      stories: res.data
+    })
+  },
+  // this.setData({
+  // title: wx.getStorageSync('story-title') || 'Huh?'
+  // })
+
+  
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -46,9 +60,20 @@ Page({
    */
   onShow: function () {
     /** Below gets data from app global data for 'stories' */
-    this.setData({
-      stories: app.globalData.stories
-    })
+    // this.setData({
+    //   stories: app.globalData.stories
+    // })
+
+    //Below shows API results everytime page loads
+    // step 0
+    const request = {
+      url: 'https://fml.shanghaiwogeng.com/api/v1/stories/',
+      method: 'GET',
+      // success's value is a function, 2nd step
+      success: this.getResult
+    }
+    // 3rd step
+    wx.request(request)
   },
 
   /**
